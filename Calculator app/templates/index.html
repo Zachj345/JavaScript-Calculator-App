@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width , initial-scale=1.0" />
+    <title>Calculator Web App</title>
+    <style>
+      body {
+        background-color: rgb(230, 222, 222);
+      }
+      .title {
+        text-align: center;
+        margin-top: 4%;
+        font-family: -apple-system;
+        padding: 0 15%;
+      }
+      .line-break {
+        width: 50%;
+        margin: auto;
+      }
+      .calculator {
+        min-width: 200px;
+        margin: auto 34.4vw;
+        display: grid;
+        height: 56vh;
+        grid-template-columns: repeat(3, 33.4%);
+      }
+      .number {
+        width: 100%;
+        height: 100%;
+        background-color: lavenderblush;
+      }
+      .buttons {
+        min-width: 200px;
+
+        margin: auto;
+        height: 6vh;
+        display: grid;
+        grid-template-columns: repeat(1, 18%);
+      }
+      .func {
+        background-color: lavender;
+        margin-left: 20vw;
+        margin-top: 6vh;
+        width: 75%;
+        height: 100%;
+        font-size: 1em;
+      }
+      .eq {
+        width: 200%;
+        height: 90%;
+        font-size: 2em;
+        background-color: lavenderblush;
+      }
+      .zero {
+        height: 90%;
+      }
+
+      .answer {
+        font-size: 2.8em;
+        margin: auto;
+        width: 40%;
+        background-color: black;
+        border: solid 2px grey;
+        color: whitesmoke;
+        min-width: 190px;
+        height: 6.4vh;
+        text-align: center;
+      }
+      @media (min-width: 630px) and (max-width: 1000px) {
+        .answer {
+          font-size: 1.8em;
+        }
+      }
+      @media (min-width: 80px) and (max-width: 630px) {
+        .answer {
+          font-size: 1.4em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="title">Hello and Welcome to your Calculator Web App</h1>
+    <br />
+    <div class="line-break">
+      <hr />
+    </div>
+
+    <br />
+    <div class="answer" id="answer"></div>
+
+    <div class="buttons">
+      <button class="func" id="clear">AC</button>
+      <button class="func" id="multiply">*</button>
+      <button class="func" id="divide">/</button>
+      <button class="func" id="add">+</button>
+      <button class="func" id="subtract">-</button>
+      <button class="func" id="decimal">.</button>
+    </div>
+
+    <div class="calculator">
+      <button class="number" id="7">7</button>
+      <button class="number" id="8">8</button>
+      <button class="number" id="9">9</button>
+      <button class="number" id="4">4</button>
+      <button class="number" id="5">5</button>
+      <button class="number" id="6">6</button>
+      <button class="number" id="1">1</button>
+      <button class="number" id="2">2</button>
+      <button class="number" id="3">3</button>
+      <button class="number zero" id="0">0</button>
+      <button class="eq" id="equals">=</button>
+    </div>
+
+    <br />
+    <br />
+    <br />
+
+    <script src="{{url_for('static', filename='index.js')}}"></script>
+  </body>
+</html>
